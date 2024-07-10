@@ -1,0 +1,154 @@
+/* 基本のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* フォントの設定 */
+    font-family: 'Arial', sans-serif;
+    /* テキストカラーの設定 */
+    color: #333;
+    /* 背景色の設定 */
+    background-color: #f7f7f7;
+    /* Flexboxを使用して垂直方向にレイアウト */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    /* 見出しの中央揃え */
+    text-align: center;
+    /* 上下のマージン */
+    margin: 20px 0;
+    /* フォントサイズ */
+    font-size: 2em;
+    /* テキストカラー */
+    color: #222;
+}
+
+form {
+    /* Flexboxを使用して中央揃え */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 下のマージン */
+    margin-bottom: 20px;
+    /* 背景色 */
+    background: #fff;
+    /* パディング */
+    padding: 20px;
+    /* 角を丸める */
+    border-radius: 5px;
+    /* ボックスシャドウ */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 最大幅 */
+    max-width: 600px;
+    /* 左右の自動マージン（中央揃え） */
+    margin: 0 auto;
+}
+
+form label {
+    /* 下のマージン */
+    margin-bottom: 10px;
+    /* フォントの太さ */
+    font-weight: bold;
+}
+
+form textarea {
+    /* パディング */
+    padding: 10px;
+    /* ボーダーの設定 */
+    border: 1px solid #ddd;
+    /* 角を丸める */
+    border-radius: 5px;
+    /* 幅の設定 */
+    width: 100%;
+    /* 下のマージン */
+    margin-bottom: 10px;
+    /* 幅変更のトランジション */
+    transition: width 0.3s, height 0.3s;
+    /* テキスト折り返しの初期設定 */
+    white-space: nowrap;
+    /* 自動リサイズを無効化 */
+    resize: none;
+}
+
+form button {
+    /* パディング */
+    padding: 10px 20px;
+    /* ボーダーを無くす */
+    border: none;
+    /* 背景色 */
+    background: #333;
+    /* テキストカラー */
+    color: #fff;
+    /* 角を丸める */
+    border-radius: 5px;
+    /* カーソルをポインターに */
+    cursor: pointer;
+    margin-top: 10px;
+    /* 幅を100%に */
+    width: 100%;
+}
+
+form button:hover {
+    /* ホバー時の背景色 */
+    background: #555;
+}
+
+form #button_submit {
+    background-color: blue; 
+}
+
+#error-message {
+    /* テキストの中央揃え */
+    text-align: center;
+    /* テキストカラー */
+    color: #d9534f;
+    /* 下のマージン */
+    margin-bottom: 20px;
+}
+
+#miradorContainer {
+    /* Flexboxを使用して縦方向にレイアウト */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* 背景色 */
+    background: #fff;
+    /* 角を丸める */
+    border-radius: 5px;
+    /* ボックスシャドウ */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* パディング */
+    padding: 20px;
+    /* 上下のマージン */
+    margin: 20px auto;
+    /* 最大幅 */
+    max-width: 80%;
+}
+
+.fixed-message {
+    text-align: center;
+    background-color: #ffffcc;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+}

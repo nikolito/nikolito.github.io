@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DH IIIF Viewer</title>
+    <!-- 外部CSSファイルを読み込む -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- メッセージ表示用領域 -->
+    <div id="fixed-message" class="fixed-message" style="display: none;">If no image is shown, please try some (click, wheel, touch...) to the viewer.</div>
+    
+    <h1>IIIF Viewer</h1>
+    <form id="manifestForm">
+        <p><label for="manifestUrl">Manifest URL</label></p>
+        <div>
+            <!-- Manifest URLを入力するテキストエリア -->
+            <textarea id="manifestUrl" name="manifestUrl" rows="3"></textarea><br>
+        </div>
+        <!-- Manifestを読み込むボタン -->
+        <button id="button_submit" type="submit">Load Manifest</button>
+        <!-- 入力フィールドをリセットするボタン -->
+        <button type="reset">Reset</button>
+        <!-- サンプルManifestを表示するボタン -->
+        <button id="showSample" type="button">Show me a sample</button>
+    </form>
+    <!-- エラーメッセージを表示するための要素 -->
+    <div id="error-message" style="color: red;"></div>
+    <!-- Mirador Viewerを表示するためのコンテナ -->
+    <div id="miradorContainer" style="display: none;"></div>
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="mirador.min.js"></script>
+    <script src="image_tools.js"></script>
+    <script src="script_iiif.js"></script>
+</body>
+</html>
